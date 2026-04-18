@@ -1,0 +1,12 @@
+# Jekyll temporary files
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: If you use vendor/bundle for local gems
+vendor/
