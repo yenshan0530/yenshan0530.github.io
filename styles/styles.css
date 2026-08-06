@@ -410,10 +410,12 @@ code {
 }
 
 
-/* Project list — publications are separated by a thin accent rule rather than a
-   filled block, which keeps the page quiet while still breaking entries apart.
-   Dark mode uses a lighter orange: the base accent is too close in value to the
-   #333 background to register as a line. */
+/* Project list — publications are separated by a hairline rule. Neutral grey
+   keeps the separation without competing with the accent-coloured links inside
+   each entry. A mid-grey at low alpha works on both themes unchanged: it darkens
+   slightly against white and lightens slightly against #333, so no override is
+   needed. Same treatment as the travel/writing entry cards, a touch stronger
+   because publication entries are taller. */
 #projects {
     margin: 0px;
 }
@@ -422,12 +424,8 @@ code {
     padding: 1.5rem 0;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid rgba(189, 93, 56, 0.4);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     border-radius: 0;
-    transition: border-color 0.5s;
-}
-.dark-theme .project {
-    border-bottom-color: rgba(207, 122, 90, 0.55);
 }
 .project:first-child {
     padding-top: 0.5rem;
