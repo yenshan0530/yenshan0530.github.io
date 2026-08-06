@@ -444,7 +444,10 @@ code {
 }
 
 
-/* Under-construction notice */
+/* Under-construction notice.
+   The amber fill needs a different alpha per theme: at 0.12 it reads as a warm
+   cream on white, but composites to rgb(72,65,55) on the #333 dark background —
+   indistinguishable from the page. Dark mode gets a stronger tint to match. */
 .construction {
     display: flex;
     align-items: baseline;
@@ -453,9 +456,17 @@ code {
     padding: 0.6rem 0.85rem;
     border-left: 3px solid #e0a458;
     border-radius: 4px;
-    background-color: rgba(224, 164, 88, 0.12);
+    background-color: rgba(224, 164, 88, 0.14);
     font-size: 0.88rem;
     line-height: 1.5;
+    transition: background-color 0.5s;
+}
+.light-theme .construction {
+    background-color: rgba(224, 164, 88, 0.16);
+}
+.dark-theme .construction {
+    background-color: rgba(224, 164, 88, 0.22);
+    border-left-color: #eab765;
 }
 .construction-icon {
     flex-shrink: 0;
