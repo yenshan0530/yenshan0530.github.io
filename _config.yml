@@ -40,3 +40,6 @@ exclude:
   - README.md
   - TODO.md
   - environment.yml
+  # Source PDFs for the paper figures. Kept in the repo, but not published —
+  # the converted SVG/PNG in assets/img/papers/ is what the site serves.
+  - assets/paper-figures

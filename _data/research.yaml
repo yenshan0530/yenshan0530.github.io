@@ -23,7 +23,7 @@ projects:
 
   - title: "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories"
     system-name: TraceSafe
-    # figure: /assets/img/papers/tracesafe.svg
+    figure: /assets/img/papers/tracesafe.png
     conference: Conference on Language Modeling (COLM 2026, San Francisco, CA)
     conference-web: https://colmweb.org/
     status:
@@ -49,7 +49,7 @@ projects:
 
   - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
     system-name: Latent-Mark
-    # figure: /assets/img/papers/latent-mark.svg
+    figure: /assets/img/papers/latent-mark.png
     conference: Interspeech 2026 (Sydney, Australia)
     conference-web: https://interspeech2026.org/
     status:
@@ -76,7 +76,7 @@ projects:
 
   - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
     system-name: Eyes-on-Me
-    # figure: /assets/img/papers/eyes-on-me.svg
+    figure: /assets/img/papers/eyes-on-me.png
     conference: Forty-Third International Conference on Machine Learning (ICML 2026, Seoul)
     conference-web: https://icml.cc/Conferences/2026
     status:
@@ -102,7 +102,7 @@ projects:
 
   - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
     system-name: Expected Harm
-    # figure: /assets/img/papers/expected-harm.svg
+    figure: /assets/img/papers/expected-harm.svg
     conference: arXiv preprint arXiv:2602.01600
     conference-web:
     status: Preprint
@@ -130,7 +130,7 @@ projects:
 
   - title: LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation
     system-name:
-    # figure: /assets/img/papers/biased-evaluators.svg
+    figure: /assets/img/papers/biased-evaluators.png
     conference: Findings of the Association for Computational Linguistics (ACL 2025, Vienna, Austria)
     conference-web: https://2025.aclweb.org/
     status:
