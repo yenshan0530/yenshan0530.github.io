@@ -256,6 +256,10 @@ code {
 
 
 /* Emoji indicator on profile photo */
+/* Anchored by its RIGHT edge, not its left. The pill grows when the label is
+   revealed, and a left anchor makes it grow rightwards — off the screen edge on
+   a phone. Pinning the right edge makes it expand inwards over the photo instead.
+   right: 14px == 192px ring - 135px offset - 43px badge, so it sits where it did. */
 .emoji-indicator {
     font-size: medium;
     width: 43px;
@@ -265,9 +269,11 @@ code {
     align-items: center;
     justify-content: center;
     background-color: #efefef;
-    position: relative;
+    position: absolute;
     top: 141px;
-    left: 135px;
+    right: 14px;
+    left: auto;
+    max-width: calc(100vw - 2rem);
     z-index: 1000;
 }
 .light-theme .emoji-indicator {
@@ -290,6 +296,7 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 10px 0 12px;
 }
 
 
