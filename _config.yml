@@ -1,6 +1,11 @@
 title: LilyNaCl3
 info: Yen-Shan (Lily) Chen — CS & Economics @ NTU
 
+# Live site. This is a GitHub Pages *user* site (repo yenshan0530.github.io),
+# so it serves from the domain root and baseurl stays empty.
+url: https://yenshan0530.github.io
+baseurl: ""
+
 # Build future-dated documents. Required for upcoming trips (Interspeech, COLM):
 # without this Jekyll silently skips them and the map links 404.
 future: true
