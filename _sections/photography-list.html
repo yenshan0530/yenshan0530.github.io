@@ -18,6 +18,8 @@
     <div class="album-list">
         {% for album in site.data.photography.albums %}
             {% include_relative _libs/album_widget.html %}
+        {% else %}
+            <p class="entry-desc">No albums up yet — check back soon.</p>
         {% endfor %}
     </div>
 

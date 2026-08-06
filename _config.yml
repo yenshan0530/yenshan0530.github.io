@@ -9,7 +9,7 @@ baseurl: ""
 # Build future-dated documents. Required for upcoming trips (Interspeech, COLM):
 # without this Jekyll silently skips them and the map links 404.
 future: true
-icon-pic: assets/headshots/8.jpg
+icon-pic: /assets/favicon.svg
 
 # Collections: one Markdown file per trip / per piece of writing.
 #   _trips/kyoto.md    -> /travel/kyoto/

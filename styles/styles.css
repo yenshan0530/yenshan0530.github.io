@@ -444,6 +444,24 @@ code {
 }
 
 
+/* Under-construction notice */
+.construction {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem 0;
+    padding: 0.6rem 0.85rem;
+    border-left: 3px solid #e0a458;
+    border-radius: 4px;
+    background-color: rgba(224, 164, 88, 0.12);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+.construction-icon {
+    flex-shrink: 0;
+}
+
+
 /* Subpage layout */
 .page-section {
     padding-top: 1rem;

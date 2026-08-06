@@ -1,0 +1,11 @@
+{%- comment -%}
+Under-construction notice. Usage:
+    {% include construction.html note="Optional extra sentence." %}
+{%- endcomment -%}
+
+<div class="construction">
+    <span class="construction-icon">🚧</span>
+    <span>
+        <b>Still under construction</b>{% if include.note %} — {{ include.note }}{% endif %}
+    </span>
+</div>

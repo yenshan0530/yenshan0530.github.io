@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Site accent badge. The L is a path, not text, so it renders identically
+       everywhere instead of depending on the viewer's system fonts. -->
+  <rect width="64" height="64" rx="13" fill="#bd5d38"/>
+  <path d="M20 15 H30 V39 H45 V49 H20 Z" fill="#ffffff"/>
+</svg>
