@@ -901,6 +901,30 @@ code {
 }
 
 
+/* Paper figures: kept small and uniform regardless of the figure's aspect
+   ratio, so a near-square one doesn't tower over a wide one. Click to enlarge. */
+.paper-figure {
+    display: block;
+    max-width: 100%;
+    max-height: 130px;
+    width: auto;
+    margin: 0 auto 0.6rem auto;
+    object-fit: contain;
+    cursor: zoom-in;
+    opacity: 0.95;
+    transition: opacity 0.2s;
+}
+.paper-figure:hover {
+    opacity: 1;
+}
+@media (max-width: 576px) {
+    /* Stacked layout: keep it a preview strip, not a hero image */
+    .paper-figure {
+        max-height: 110px;
+    }
+}
+
+
 /* Equal-contribution note under a paper's author list */
 .equal-contrib {
     font-size: 0.8rem;

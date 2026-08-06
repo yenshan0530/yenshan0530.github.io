@@ -346,7 +346,7 @@ initCategoryFilter('photo-filters', '.album', 'photo-empty');
 // Photo lightbox (photography albums + trip galleries)
 (function () {
     var items = Array.prototype.slice.call(
-        document.querySelectorAll('.album-cover, .album-thumb')
+        document.querySelectorAll('.album-cover, .album-thumb, .paper-figure')
     );
     if (!items.length) return;
 
