@@ -1,5 +1,13 @@
 title: LilyNaCl3
-info: Yen-Shan (Lily) Chen — CS & Economics @ NTU
+info: Yen-Shan (Lily) Chen — AI Safety Researcher @ NTU & CyCraft
+
+# Used for the meta description and link previews (Open Graph / Twitter cards).
+description: >-
+  Yen-Shan (Lily) Chen — AI safety researcher at National Taiwan University and
+  CyCraft, working on LLM safety evaluation, adversarial robustness and RAG security.
+
+# Image shown when the site is shared. Needs a leading slash.
+og-image: /assets/headshots/8.jpg
 
 # Live site. This is a GitHub Pages *user* site (repo yenshan0530.github.io),
 # so it serves from the domain root and baseurl stays empty.
