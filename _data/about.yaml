@@ -23,17 +23,23 @@ orcid:
 # DRAFT — assembled from your CV. Please rewrite in your own voice; I have kept
 # it to things the CV states outright rather than inventing any framing.
 first-paragraph: >-
-  I am an M.S. student in Computer Science and Information Engineering at
-  <b>National Taiwan University</b>, where I work in the Machine Intelligence and
-  Understanding Lab with Prof. Yun-Nung Chen. I am also a Data Scientist at
-  <b>CyCraft Technology</b>. I finished my B.S. at NTU in CSIE with a double major
-  in Economics.
+  I am an M.S. student in
+  <a href="https://www.csie.ntu.edu.tw/" target="_blank" rel="noopener">Computer Science and Information Engineering</a>
+  at <a href="https://www.ntu.edu.tw/" target="_blank" rel="noopener">National Taiwan University</a>,
+  where I work in the
+  <a href="http://miulab.tw/" target="_blank" rel="noopener">Machine Intelligence and Understanding Lab</a>
+  with <a href="https://www.csie.ntu.edu.tw/~yvchen/" target="_blank" rel="noopener">Prof. Yun-Nung Chen</a>.
+  I am also a Data Scientist at
+  <a href="https://cycraft.com/" target="_blank" rel="noopener">CyCraft Technology</a>.
+  I finished my B.S. at NTU in CSIE with a double major in Economics.
 
 second-paragraph: >-
   I work on the safety and robustness of large language models — how they fail,
   how to measure those failures honestly, and how to attack the systems we build
-  on top of them. Previously I spent a summer at <b>Caltech</b> with Prof. Colin
-  Camerer studying rational inattention through eye-tracking, and interned on the
+  on top of them. Previously I spent a summer at
+  <a href="https://www.caltech.edu/" target="_blank" rel="noopener">Caltech</a>
+  with <a href="https://www.hss.caltech.edu/people/colin-f-camerer" target="_blank" rel="noopener">Prof. Colin Camerer</a>
+  studying rational inattention through eye-tracking, and interned on the
   <b>Google</b> Pixel Camera team, where my work fed into the Guided Frame feature.
 
 # research/work interests (shown in code-style box)
