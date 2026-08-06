@@ -410,12 +410,28 @@ code {
 }
 
 
-/* Project list */
+/* Project list — each publication sits in its own tinted block so entries read
+   as separate items rather than one run-on column. The tint needs a different
+   value per theme: a light-grey wash is invisible on the #333 dark background,
+   so dark mode lifts a white overlay instead of laying down a dark one. */
 #projects {
     margin: 0px;
 }
 .project {
-    margin: 0px;
+    margin: 0 0 1.1rem 0;
+    padding: 1.15rem 1.35rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: rgba(128, 128, 128, 0.05);
+    transition: background-color 0.5s, border-color 0.5s;
+}
+.light-theme .project {
+    background-color: rgba(0, 0, 0, 0.035);
+    border-color: rgba(0, 0, 0, 0.055);
+}
+.dark-theme .project {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
 }
 
 
