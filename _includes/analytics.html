@@ -1,0 +1,10 @@
+{%- comment -%}
+GoatCounter tracking script. Only emitted when `goatcounter` is set in
+_data/footer.yaml. Counts unique visits (8-hour session window) without cookies:
+the session key is hash(siteID + User-Agent + IP), held in memory only and never
+written to disk. Nothing is stored on the visitor's device.
+{%- endcomment -%}
+{% if site.data.footer.goatcounter %}
+    <script data-goatcounter="https://{{ site.data.footer.goatcounter }}.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+{% endif %}

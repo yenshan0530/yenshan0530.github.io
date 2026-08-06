@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="description" content="{{ page.description | default: site.description }}"/>
+        <meta name="author" content="{{ site.title }}"/>
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <link rel="icon" type="image/x-icon" href="{{ site.icon-pic }}"/>
+
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+        <!-- Leaflet (only on pages that declare `map: true`) -->
+        {% if page.map %}
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        {% endif %}
+
+        <!-- Core theme CSS -->
+        <link href="/styles/styles.css" rel="stylesheet"/>
+
+    </head>
+
+    <body>
+
+        <!-- Progress bar on top -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Back to top button -->
+        <a id="back-to-top-button"></a>
+
+        <!-- Toggle dark/light theme button -->
+        <button class="toggle-theme-button" onclick="toggleTheme()">☀️</button>
+
+        <!-- Top navigation bar (data-driven, shared) -->
+        {% include topnav.html %}
+
+        <!-- Content -->
+        <div class="container" style="padding-top: 5rem;">
+            {{ content }}
+        </div>
+
+        <!-- Bootstrap core JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- Core theme JS (no Isotope needed on content pages) -->
+        <script src="/js/scripts.js"></script>
+
+        <!-- Leaflet + travel map (only on pages that declare `map: true`) -->
+        {% if page.map %}
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            <script src="/js/travel-map.js"></script>
+        {% endif %}
+
+        {% include analytics.html %}
+
+    </body>
+</html>

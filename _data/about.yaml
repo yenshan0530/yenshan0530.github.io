@@ -1,0 +1,33 @@
+# basic information
+name: Yen-Shan (Lily) Chen
+profile-pic: assets/headshots/8.jpg
+# pronunciation: /your-ipa/             # IPA pronunciation, or leave blank
+
+# emoji indicator on profile photo (leave blank to hide)
+emoji: 🧂
+desc-emoji: NaCl₃ = 鹽三 = 妍姍
+
+# social links (leave blank to hide icon)
+scholar: https://scholar.google.com/citations?user=NwXW5KQAAAAJ&hl=en&authuser=1
+github: http://github.com/yenshan0530
+linkedin: https://www.linkedin.com/in/yen-shan-chen-667847263/
+youtube:
+resume: /assets/cv/lily-chen-cv.pdf   # keep this filename stable so the link never breaks
+projects:                             # show or leave blank
+location:                             # Google Maps link
+codepen:
+orcid:
+
+# about me paragraphs
+first-paragraph: Write your first bio paragraph here.
+second-paragraph: Write your second bio paragraph here.
+
+# research/work interests (shown in code-style box)
+research-introduction: Brief description of your research or work focus.
+
+research-interests:
+  - field: Area 1
+    subfields: subfield a, subfield b
+
+  - field: Area 2
+    subfields: subfield c, subfield d

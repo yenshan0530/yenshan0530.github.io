@@ -1,0 +1,37 @@
+title: LilyNaCl3
+info: Yen-Shan (Lily) Chen — CS & Economics @ NTU
+
+# Build future-dated documents. Required for upcoming trips (Interspeech, COLM):
+# without this Jekyll silently skips them and the map links 404.
+future: true
+icon-pic: assets/headshots/8.jpg
+
+# Collections: one Markdown file per trip / per piece of writing.
+#   _trips/kyoto.md    -> /travel/kyoto/
+#   _writing/essay.md  -> /writing/essay/
+collections:
+  trips:
+    output: true
+    permalink: /travel/:name/
+  writing:
+    output: true
+    permalink: /writing/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: trips
+    values:
+      layout: trip
+  - scope:
+      path: ""
+      type: writing
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - TODO.md
+  - environment.yml

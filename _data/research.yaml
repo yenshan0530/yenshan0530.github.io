@@ -1,0 +1,147 @@
+categories:
+
+  - data-filter: llm-safety
+    category-name: llm safety
+
+  - data-filter: rag
+    category-name: rag
+
+  - data-filter: audio
+    category-name: audio
+
+
+projects:
+
+  - title: "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories"
+    system-name: TraceSafe
+    gif: assets/img/tracesafe.gif        # TODO: drop in your figure
+    conference: Conference on Language Modeling (COLM 2026, San Francisco, CA)
+    conference-web: https://colmweb.org/
+    status:
+    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
+    pdf: https://arxiv.org/abs/2604.07223
+    code: https://github.com/cycraft-corp/TraceSafe
+    demo: https://huggingface.co/datasets/CyCraftAI/TraceSafe
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      As LLMs evolve from static chatbots into autonomous agents, the primary vulnerability
+      surface shifts from final outputs to intermediate execution traces.
+    abstract-more: >-
+      We introduce TraceSafe-Bench, the first benchmark for mid-trajectory safety: 12 risk
+      categories spanning security threats (prompt injection, privacy leaks) and operational
+      failures (hallucinations, interface inconsistencies) across 1,000+ execution instances.
+      Evaluating 13 LLM-as-a-guard models and 7 specialized guardrails, we find efficacy is
+      driven more by structural data competence than by semantic safety alignment, and that
+      architecture matters more than scale.
+    tag: more_tracesafe
+    category: llm-safety
+
+  - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
+    system-name: Latent-Mark
+    gif: assets/img/latent-mark.gif      # TODO: drop in your figure
+    conference: Interspeech 2026 (Sydney, Australia)
+    conference-web: https://interspeech2026.org/
+    status:
+    authors: <u>Yen-Shan Chen</u>*, Shih-Yu Lai*, Ying-Jung Tsou, Yi-Cheng Lin, Bing-Yu Chen, Yun-Nung Chen, Hung-yi Lee, Shang-Tse Chen.
+    equal-contrib: true
+    pdf: https://arxiv.org/abs/2603.05310
+    code:
+    demo:
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      Existing audio watermarking techniques achieve strong robustness against traditional DSP
+      attacks but remain vulnerable to neural resynthesis, as modern neural audio codecs act as
+      semantic filters that discard the imperceptible waveform variations prior methods rely on.
+    abstract-more: >-
+      We present Latent-Mark, the first zero-bit audio watermarking framework designed to survive
+      semantic compression, embedding the watermark within the codec's invariant latent space
+      rather than the waveform. Cross-Codec Optimization jointly optimizes across multiple
+      surrogate codecs, yielding zero-shot transferability to unseen neural codecs and
+      state-of-the-art resilience to DSP attacks while preserving imperceptibility.
+    tag: more_latentmark
+    category: audio
+
+  - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
+    system-name: Eyes-on-Me
+    gif: assets/img/eyes-on-me.gif       # TODO: drop in your figure
+    conference: Forty-Third International Conference on Machine Learning (ICML 2026, Seoul)
+    conference-web: https://icml.cc/Conferences/2026
+    status:
+    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
+    pdf: https://arxiv.org/abs/2510.00586
+    code:
+    demo: https://openreview.net/forum?id=ChfIF8UZ6X
+    slides:
+    talk:
+    poster: https://icml.cc/virtual/2026/poster/61331
+    abstract-less: >-
+      Existing data poisoning attacks on retrieval-augmented generation (RAG) systems scale
+      poorly, as they require costly optimization of poisoned documents for each target phrase.
+    abstract-more: >-
+      We introduce Eyes-on-Me, a modular attack that decomposes an adversarial document into
+      reusable Attention Attractors and Focus Regions, adapting to new targets at near-zero cost
+      by steering a small subset of attention heads correlated with attack success. Across 18
+      end-to-end RAG settings, it raises average attack success rates from 21.9 to 57.8 (2.6x
+      over prior work), and a single optimized attractor transfers to unseen black-box retrievers
+      and generators without retraining.
+    tag: more_eyesonme
+    category: rag
+
+  - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
+    system-name: Expected Harm
+    gif: assets/img/expected-harm.gif    # TODO: drop in your figure
+    conference: arXiv preprint arXiv:2602.01600
+    conference-web:
+    status: Preprint
+    authors: <u>Yen-Shan Chen</u>*, Zhi Rui Tam*, Cheng-Kuang Wu, Yun-Nung Chen.
+    equal-contrib: true
+    pdf: https://arxiv.org/abs/2602.01600
+    code: https://github.com/yenshan0530/Expected-Harm
+    demo: https://expectedharm.github.io/
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      Severity-based taxonomies dominate current LLM safety evaluation, but they assume uniform
+      risk across malicious queries and ignore Execution Likelihood: the conditional probability
+      of a threat actually being realized given the model's response.
+    abstract-more: >-
+      We propose Expected Harm, a metric that weights a jailbreak's severity by its execution
+      likelihood. Empirical analysis reveals Inverse Risk Calibration: models refuse
+      low-likelihood (high-cost) threats while remaining vulnerable to high-likelihood (low-cost)
+      queries, a structural gap that raises existing jailbreak success rates by up to 2x. Linear
+      probing shows models encode severity in their latent space but have no distinguishable
+      internal representation of execution cost.
+    tag: more_expectedharm
+    category: llm-safety
+
+  - title: LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation
+    system-name:
+    gif: assets/img/biased-evaluators.gif  # TODO: drop in your figure
+    conference: Findings of the Association for Computational Linguistics (ACL 2025, Vienna, Austria)
+    conference-web: https://2025.aclweb.org/
+    status:
+    authors: <u>Yen-Shan Chen</u>*, Jing Jin*, Peng-Ting Kuo, Chao-Wei Huang, Yun-Nung Chen.
+    equal-contrib: true
+    pdf: https://aclanthology.org/2025.findings-acl.1369/
+    code:
+    demo:
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      LLM self-preference bias is well documented, but the extent to which it manifests in
+      fact-oriented tasks, especially RAG frameworks where keyword extraction and factual
+      accuracy matter more than stylistic elements, remains unclear.
+    abstract-more: >-
+      We simulate two phases of the RAG pipeline: pointwise reranking of human-authored versus
+      model-generated passages, and pairwise reading comprehension for generation. Contrary to
+      prior findings of self-preference in rating tasks, we observe no significant
+      self-preference effect in RAG; instead, factual accuracy drives LLM output even without
+      prior knowledge. Results hold across three QA datasets and five widely adopted models.
+    tag: more_biasedeval
+    category: rag

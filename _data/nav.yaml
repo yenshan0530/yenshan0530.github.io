@@ -1,0 +1,11 @@
+links:
+  - label: Home
+    url: /
+  - label: Travel
+    url: /travel/
+  - label: Writing
+    url: /writing/
+  - label: Photography
+    url: /photography/
+  - label: Misc
+    url: /misc/

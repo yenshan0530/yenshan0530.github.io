@@ -1,0 +1,14 @@
+<div class="entry-card">
+    <div class="entry-meta">
+        <span class="entry-date">{{ entry.date }}</span>
+        {% if entry.location %}<span class="entry-location">· {{ entry.location }}</span>{% endif %}
+        {% if entry.category %}<span class="entry-tag">{{ entry.category }}</span>{% endif %}
+        {% for tag in entry.tags %}<span class="entry-tag">{{ tag }}</span>{% endfor %}
+    </div>
+    {% if entry.url %}
+        <a href="{{ entry.url }}"><h4 class="entry-title">{{ entry.title }}</h4></a>
+    {% else %}
+        <h4 class="entry-title">{{ entry.title }}</h4>
+    {% endif %}
+    {% if entry.description %}<p class="entry-desc">{{ entry.description }}</p>{% endif %}
+</div>

@@ -1,0 +1,50 @@
+---
+layout: page
+---
+
+<div class="page-section">
+
+    <p class="trip-back"><a href="{{ '/travel/' | relative_url }}">&larr; All Trips</a></p>
+
+    <div class="entry-meta">
+        <span class="entry-date">{{ page.date | date: "%B %Y" }}</span>
+        {% if page.location %}<span class="entry-location">· {{ page.location }}</span>{% endif %}
+        {% for tag in page.tags %}<span class="entry-tag">{{ tag }}</span>{% endfor %}
+    </div>
+
+    <h2 class="page-section-title">{{ page.title }}</h2>
+    {% if page.event %}<p class="entry-event">{{ page.event }}</p>{% endif %}
+    {% if page.summary %}<p class="page-intro">{{ page.summary }}</p>{% endif %}
+
+    {% if page.places.size > 1 %}
+        <p class="trip-itinerary">
+            {% for p in page.places %}{{ p.name }}{% unless forloop.last %} <span class="route-arrow">→</span> {% endunless %}{% endfor %}
+        </p>
+    {% endif %}
+    <hr>
+
+    {% if page.cover %}
+        <img class="album-cover" src="{{ page.cover }}" alt="{{ page.title }}"
+             data-full="{{ page.cover }}" data-caption="{{ page.title }}">
+    {% endif %}
+
+    <div class="trip-body">
+        {{ content }}
+    </div>
+
+    {% if page.gallery.size > 0 %}
+        <div class="album-grid">
+            {% for photo in page.gallery %}
+                <figure class="album-item">
+                    <img class="album-thumb" src="{{ photo.src }}"
+                         alt="{{ photo.caption | default: page.title }}" loading="lazy"
+                         data-full="{{ photo.src }}" data-caption="{{ photo.caption }}">
+                    {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+                </figure>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,32 @@
+<article class="album" data-category="{{ album.category }}">
+
+    {%- assign cat = site.data.photography.categories | where: "slug", album.category | first -%}
+    <div class="entry-meta">
+        {% if album.date %}<span class="entry-date">{{ album.date }}</span>{% endif %}
+        {% if album.location %}<span class="entry-location">· {{ album.location }}</span>{% endif %}
+        {% if cat %}<span class="entry-tag">{{ cat.name }}</span>{% endif %}
+        {% for tag in album.tags %}<span class="entry-tag">{{ tag }}</span>{% endfor %}
+    </div>
+
+    <h4 class="entry-title">{{ album.title }}</h4>
+    {% if album.description %}<p class="entry-desc">{{ album.description }}</p>{% endif %}
+
+    {% if album.cover %}
+        <img class="album-cover" src="{{ album.cover }}" alt="{{ album.title }}" loading="lazy"
+             data-full="{{ album.cover }}" data-caption="{{ album.title }}">
+    {% endif %}
+
+    {% if album.photos.size > 0 %}
+        <div class="album-grid">
+            {% for photo in album.photos %}
+                <figure class="album-item">
+                    <img class="album-thumb" src="{{ photo.src }}"
+                         alt="{{ photo.caption | default: album.title }}" loading="lazy"
+                         data-full="{{ photo.src }}" data-caption="{{ photo.caption }}">
+                    {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+                </figure>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</article>

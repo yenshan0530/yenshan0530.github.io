@@ -1,0 +1,32 @@
+intro: Odds and ends — things that don't fit anywhere else.
+
+# Each group renders as a heading + a list.
+# Every item takes: text (required), url (optional link), note (optional aside).
+# Delete or rename any group; add as many as you like.
+
+groups:
+
+  - heading: Currently
+    items:
+      - text: "Reading — book title"
+      - text: "Listening to — album or artist"
+      - text: "Playing with — a tool or side project"
+
+  - heading: Bookmarks
+    items:
+      - text: "A link worth keeping"
+        url: "https://example.com"
+        note: "why it's worth keeping"
+      - text: "Another one"
+        url: "https://example.com"
+
+  - heading: Talks & Service
+    items:
+      - text: "Reviewer, Conference Name (Year)"
+      - text: "Invited talk — talk title"
+        note: "Venue, Month Year"
+
+  - heading: Random
+    items:
+      - text: "Why NaCl₃? NaCl is 鹽 (yán) and the 3 is 三 (sān) — put them together and you get 妍姍 (Yán-Shān), my Chinese name."
+        note: "chemically nonsense, phonetically perfect"

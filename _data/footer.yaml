@@ -1,0 +1,36 @@
+logos:
+  # Add affiliation logos here, e.g.:
+  # - logo_affiliation: /assets/img/org_logo.png
+  #   logo_alt_text: "Org Name"
+
+# Link to this site's own source code. Leave blank to hide.
+source: https://github.com/yenshan0530/Popsicle-Monster
+
+
+# ---------------------------------------------------------------------------
+# Visitor counter — pick ONE. Blank both to hide the counter entirely.
+# If `goatcounter` is set it wins over `counter`.
+# ---------------------------------------------------------------------------
+
+# (a) hits.sh — zero setup, but it counts raw VIEWS, not people.
+#     It has no dedup by design (no cookies, no IP, no fingerprint), so
+#     reloads, bots and proxy prefetches all increment the same number.
+#
+#     TO RESET: hits.sh has no reset button — the count is keyed off this exact
+#     URL path. Change the path (e.g. bump `/site` to `/site2`) and the badge
+#     starts from zero. The old key keeps its count but nothing points at it.
+counter: https://hits.sh/github.com/yenshan0530/Popsicle-Monster/site.svg?style=flat-square&label=views&color=bd5d38
+
+# (b) GoatCounter — counts UNIQUE VISITORS. Free for personal sites, no cookies:
+#     it derives an in-memory session key from (site + User-Agent + IP), keeps it
+#     for 8 hours, and never writes the IP or UA to disk. Repeat views inside that
+#     window count once. Set this to just your subdomain code, e.g. `lilynacl3`.
+#
+#     Setup (~2 min):
+#       1. Sign up at https://www.goatcounter.com/ and pick a code (yourname).
+#       2. In Settings, enable "Allow adding visitor counts on your website"
+#          (off by default, or the badge will not render).
+#       3. Put the code below and comment out `counter:` above.
+#
+#     Caveat: the badge is cached up to 4 hours, so counts lag a little.
+goatcounter:

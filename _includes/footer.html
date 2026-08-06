@@ -1,0 +1,40 @@
+<!-- Footer (shared by all pages and layouts) -->
+
+<div>&#8203;</div>
+<hr>
+<footer class="pt-2 my-md-2 pt-md-">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md text-left align-self-center">
+            <p class="h6">
+                © {{ site.title }}, <span id="currentYear">{{ site.time | date: "%Y" }}</span>
+                <span class="footer-sep">|</span>
+                I used <a href="https://github.com/mkhangg/academic-website" target="_blank" rel="noopener">this template</a> to make my website!
+            </p>
+
+            {%- assign has_counter = site.data.footer.goatcounter | default: site.data.footer.counter -%}
+            {% if site.data.footer.source or has_counter %}
+                <p class="footer-meta">
+                    {% if site.data.footer.source %}
+                        <a href="{{ site.data.footer.source }}" target="_blank" rel="noopener">source</a>
+                    {% endif %}
+                    {% if site.data.footer.source and has_counter %}
+                        <span class="footer-sep">·</span>
+                    {% endif %}
+                    {% if site.data.footer.goatcounter %}
+                        <img class="footer-counter"
+                             src="https://{{ site.data.footer.goatcounter }}.goatcounter.com/counter/TOTAL.svg"
+                             alt="unique visitors" loading="lazy">
+                    {% elsif site.data.footer.counter %}
+                        <img class="footer-counter" src="{{ site.data.footer.counter }}" alt="page views" loading="lazy">
+                    {% endif %}
+                </p>
+            {% endif %}
+        </div>
+        <div class="col col-md text-right">
+            {% for logo in site.data.footer.logos %}
+                <img class="mr-4" src="{{ logo.logo_affiliation }}" data-canonical-src="{{ logo.logo_affiliation }}" alt="{{ logo.logo_alt_text }}" width="60"/>
+            {% endfor %}
+        </div>
+    </div>
+    <p></p>
+</footer>

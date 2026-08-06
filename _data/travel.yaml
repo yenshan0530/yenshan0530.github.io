@@ -1,0 +1,18 @@
+intro: A collection of travel journals, trip notes, and reflections from the road.
+
+# The trips themselves live in _trips/*.md — one Markdown file per trip.
+# Each file's front matter supplies its map pins (`places`) and list entry,
+# and the file becomes that trip's own page at /travel/<filename>/.
+#
+# A trip with several `places` is drawn as one route: a pin per stop,
+# connected by a dashed line, all linking back to the same post.
+
+home:
+  name: Taipei, Taiwan
+  lat: 25.0330
+  lon: 121.5654
+
+map:
+  center-lat: 25
+  center-lon: 60
+  zoom: 2

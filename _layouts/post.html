@@ -1,0 +1,26 @@
+---
+layout: page
+---
+
+<div class="page-section">
+
+    <p class="trip-back"><a href="{{ '/writing/' | relative_url }}">&larr; All Writing</a></p>
+
+    {%- assign cat = site.data.writing.categories | where: "slug", page.category | first -%}
+    <div class="entry-meta">
+        <span class="entry-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+        {% if cat %}<span class="entry-tag">{{ cat.name }}</span>{% endif %}
+        {% for tag in page.tags %}<span class="entry-tag">{{ tag }}</span>{% endfor %}
+    </div>
+
+    <h2 class="page-section-title">{{ page.title }}</h2>
+    {% if page.summary %}<p class="page-intro">{{ page.summary }}</p>{% endif %}
+    <hr>
+
+    <div class="trip-body">
+        {{ content }}
+    </div>
+
+</div>
+
+{% include footer.html %}

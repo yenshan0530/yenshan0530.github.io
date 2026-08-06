@@ -1,0 +1,33 @@
+<div class="page-section">
+    <h3 class="page-section-title">All Trips</h3>
+    <hr>
+    <div class="entry-list">
+        {%- assign now = site.time | date: "%s" | plus: 0 -%}
+        {% assign trips = site.trips | sort: "date" | reverse %}
+        {% for trip in trips %}
+            {%- assign tsec = trip.date | date: "%s" | plus: 0 -%}
+            <div class="entry-card trip-card"
+                 data-year="{{ trip.date | date: '%Y' }}"
+                 data-region="{{ trip.region }}"
+                 data-purpose="{{ trip.purpose | join: ' ' }}">
+                <div class="entry-meta">
+                    <span class="entry-date">{{ trip.date | date: "%b %Y" }}</span>
+                    {% if trip.location %}<span class="entry-location">· {{ trip.location }}</span>{% endif %}
+                    {% if tsec > now %}<span class="entry-upcoming">upcoming</span>{% endif %}
+                    {% if trip.region %}<span class="entry-tag">{{ trip.region }}</span>{% endif %}
+                    {% for p in trip.purpose %}<span class="entry-tag">{{ p }}</span>{% endfor %}
+                </div>
+                <a href="{{ trip.url | relative_url }}"><h4 class="entry-title">{{ trip.title }}</h4></a>
+                {% if trip.event %}<p class="entry-event">{{ trip.event }}</p>{% endif %}
+                {% if trip.summary %}<p class="entry-desc">{{ trip.summary }}</p>{% endif %}
+                {% if trip.places.size > 1 %}
+                    <p class="entry-route">
+                        {% for p in trip.places %}{{ p.name }}{% unless forloop.last %} <span class="route-arrow">→</span> {% endunless %}{% endfor %}
+                    </p>
+                {% endif %}
+            </div>
+        {% else %}
+            <p class="entry-desc">No trips written yet.</p>
+        {% endfor %}
+    </div>
+</div>

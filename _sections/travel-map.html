@@ -1,0 +1,97 @@
+<div class="page-section">
+    <h2 class="page-section-title">✈️ Travel</h2>
+    {% if site.data.travel.intro %}<p class="page-intro">{{ site.data.travel.intro }}</p>{% endif %}
+    <hr>
+
+    {% assign pinned = site.trips | where_exp: "t", "t.places" | sort: "date" %}
+    {%- assign now = site.time | date: "%s" | plus: 0 -%}
+
+    {% if pinned.size > 0 %}
+
+        {%- comment -%} Build unique, comma-delimited sets for each filter axis {%- endcomment -%}
+        {%- assign ylist = "," -%}
+        {%- assign rlist = "," -%}
+        {%- assign plist = "," -%}
+        {%- for t in pinned -%}
+            {%- assign y = t.date | date: "%Y" -%}
+            {%- assign ykey = "," | append: y | append: "," -%}
+            {%- unless ylist contains ykey -%}{%- assign ylist = ylist | append: y | append: "," -%}{%- endunless -%}
+
+            {%- if t.region -%}
+                {%- assign rkey = "," | append: t.region | append: "," -%}
+                {%- unless rlist contains rkey -%}{%- assign rlist = rlist | append: t.region | append: "," -%}{%- endunless -%}
+            {%- endif -%}
+
+            {%- for p in t.purpose -%}
+                {%- assign pkey = "," | append: p | append: "," -%}
+                {%- unless plist contains pkey -%}{%- assign plist = plist | append: p | append: "," -%}{%- endunless -%}
+            {%- endfor -%}
+        {%- endfor -%}
+        {%- assign years = ylist | remove_first: "," | split: "," | sort | reverse -%}
+        {%- assign regions = rlist | remove_first: "," | split: "," | sort -%}
+        {%- assign purposes = plist | remove_first: "," | split: "," | sort -%}
+
+        <div class="filter-bar">
+            <div class="filter-row" data-filter-key="year">
+                <span class="filter-label">year</span>
+                <button class="filter-button active" data-value="*">all</button>
+                {% for y in years %}<button class="filter-button" data-value="{{ y }}">{{ y }}</button>{% endfor %}
+            </div>
+
+            {% if regions.size > 0 %}
+            <div class="filter-row" data-filter-key="region">
+                <span class="filter-label">region</span>
+                <button class="filter-button active" data-value="*">all</button>
+                {% for r in regions %}<button class="filter-button" data-value="{{ r }}">{{ r }}</button>{% endfor %}
+            </div>
+            {% endif %}
+
+            {% if purposes.size > 0 %}
+            <div class="filter-row" data-filter-key="purpose">
+                <span class="filter-label">purpose</span>
+                <button class="filter-button active" data-value="*">all</button>
+                {% for p in purposes %}<button class="filter-button" data-value="{{ p }}">{{ p }}</button>{% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+        <div id="travel-map"
+             data-center-lat="{{ site.data.travel.map.center-lat | default: 20 }}"
+             data-center-lon="{{ site.data.travel.map.center-lon | default: 10 }}"
+             data-zoom="{{ site.data.travel.map.zoom | default: 2 }}"></div>
+
+        <p class="filter-empty" id="filter-empty" style="display:none;">No trips match that combination.</p>
+
+        <div class="selection-bar" id="selection-bar" style="display:none;">
+            <span class="selection-count" id="selection-count"></span>
+            <button class="selection-clear" id="selection-clear">show all again</button>
+        </div>
+
+        <script type="application/json" id="travel-map-data">
+        {"home":{{ site.data.travel.home | jsonify }},"trips":[{% for t in pinned %}{%- assign tsec = t.date | date: "%s" | plus: 0 -%}{"title":{{ t.title | jsonify }},"year":{{ t.date | date: "%Y" | jsonify }},"date":{{ t.date | date: "%b %Y" | jsonify }},"location":{{ t.location | jsonify }},"event":{{ t.event | jsonify }},"region":{{ t.region | jsonify }},"purpose":{{ t.purpose | default: empty_array | jsonify }},"summary":{{ t.summary | jsonify }},"cover":{{ t.cover | jsonify }},"url":{{ t.url | relative_url | jsonify }},"upcoming":{% if tsec > now %}true{% else %}false{% endif %},"places":{{ t.places | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+        </script>
+
+        <div class="timeline-wrap">
+            <div class="timeline" id="trip-timeline">
+                {% for t in pinned %}
+                    {%- assign tsec = t.date | date: "%s" | plus: 0 -%}
+                    <button class="timeline-item{% if tsec > now %} upcoming{% endif %}"
+                            data-index="{{ forloop.index0 }}"
+                            data-year="{{ t.date | date: '%Y' }}"
+                            data-region="{{ t.region }}"
+                            data-purpose="{{ t.purpose | join: ' ' }}">
+                        <span class="timeline-date">{{ t.date | date: "%b %Y" }}</span>
+                        <span class="timeline-dot"></span>
+                        <span class="timeline-title">{{ t.title }}</span>
+                        {% if t.event %}<span class="timeline-event">{{ t.event }}</span>{% endif %}
+                    </button>
+                {% endfor %}
+            </div>
+        </div>
+
+        <p class="map-hint">Click a pin or a timeline dot to show that trip on its own · click more to compare several at once · click again to remove one, or press Esc to show all · dashed lines connect stops on a single trip · hollow pins are upcoming.</p>
+
+    {% else %}
+        <p class="entry-desc">No trips pinned yet — add a <code>places</code> list to a file in <code>_trips/</code> and it will show up here.</p>
+    {% endif %}
+</div>

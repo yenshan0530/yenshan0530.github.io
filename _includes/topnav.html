@@ -1,0 +1,19 @@
+<nav class="topnav">
+    <a class="nav-brand" href="/">{{ site.title }}</a>
+    <div class="nav-links">
+        {% for link in site.data.nav.links %}
+            {% if link.url == '/' %}
+                {% assign is_active = false %}
+                {% if page.url == '/' or page.url == '/index.html' %}
+                    {% assign is_active = true %}
+                {% endif %}
+            {% else %}
+                {% assign is_active = false %}
+                {% if page.url == link.url %}
+                    {% assign is_active = true %}
+                {% endif %}
+            {% endif %}
+            <a href="{{ link.url }}"{% if is_active %} class="active"{% endif %}>{{ link.label }}</a>
+        {% endfor %}
+    </div>
+</nav>

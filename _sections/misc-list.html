@@ -1,0 +1,25 @@
+<div class="page-section">
+    <h2 class="page-section-title">🧩 Miscellaneous</h2>
+    {% if site.data.misc.intro %}<p class="page-intro">{{ site.data.misc.intro }}</p>{% endif %}
+    <hr>
+
+    {% for group in site.data.misc.groups %}
+        <div class="misc-group">
+            <h3 class="misc-heading">{{ group.heading }}</h3>
+            <ul class="misc-items">
+                {% for item in group.items %}
+                    <li>
+                        {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.text }}</a>
+                        {% else %}
+                            {{ item.text }}
+                        {% endif %}
+                        {% if item.note %}<span class="misc-note">— {{ item.note }}</span>{% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p class="entry-desc">Nothing here yet.</p>
+    {% endfor %}
+</div>

@@ -1,0 +1,62 @@
+intro: Photos from travels and everyday life.
+
+# Categories drive the filter buttons on /photography/.
+# The `slug` is what each album below references as `category:`.
+categories:
+
+  - slug: portraits
+    name: portraits
+    description: 人像 — people, posed and candid.
+
+  - slug: travel
+    name: travel
+    description: From the road.
+
+  - slug: street
+    name: street
+    description: Found moments.
+
+  - slug: everyday
+    name: everyday
+    description: The ordinary stuff.
+
+
+# Each album renders as a cover image + a thumbnail grid.
+# Clicking any thumbnail opens the lightbox (arrow keys / Esc to navigate).
+#
+# IMPORTANT: image paths must start with a leading "/" so they resolve
+# correctly from /photography/ (a bare "assets/..." would 404 here).
+#
+# Suggested layout on disk:
+#   assets/img/photos/<album-slug>/cover.jpg
+#   assets/img/photos/<album-slug>/01.jpg, 02.jpg, ...
+
+albums:
+
+  - title: "Portrait Session"
+    category: portraits
+    date: "Month Year"
+    location: "City, Country"
+    tags: [35mm]
+    cover: /assets/img/photos/portrait-session/cover.jpg
+    description: "A sentence or two about this set."
+    photos:
+      - src: /assets/img/photos/portrait-session/01.jpg
+        caption: "Optional caption."
+      - src: /assets/img/photos/portrait-session/02.jpg
+        caption:
+      - src: /assets/img/photos/portrait-session/03.jpg
+        caption:
+
+  - title: "Album Title"
+    category: travel
+    date: "Month Year"
+    location: "City, Country"
+    tags: [film]
+    cover: /assets/img/photos/album-slug/cover.jpg
+    description: "Albums without photos just show the cover."
+    photos:
+      - src: /assets/img/photos/album-slug/01.jpg
+        caption:
+      - src: /assets/img/photos/album-slug/02.jpg
+        caption:

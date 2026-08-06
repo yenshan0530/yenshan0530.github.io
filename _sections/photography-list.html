@@ -1,0 +1,25 @@
+<div class="page-section">
+    <h2 class="page-section-title">📷 Photography</h2>
+    {% if site.data.photography.intro %}<p class="page-intro">{{ site.data.photography.intro }}</p>{% endif %}
+    <hr>
+
+    {% if site.data.photography.categories.size > 0 %}
+        <div class="filter-bar">
+            <div class="filter-row" id="photo-filters">
+                <span class="filter-label">genre</span>
+                <button class="filter-button active" data-value="*">all</button>
+                {% for c in site.data.photography.categories %}
+                    <button class="filter-button" data-value="{{ c.slug }}" title="{{ c.description }}">{{ c.name }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="album-list">
+        {% for album in site.data.photography.albums %}
+            {% include_relative _libs/album_widget.html %}
+        {% endfor %}
+    </div>
+
+    <p class="filter-empty" id="photo-empty" style="display:none;">Nothing in that genre yet.</p>
+</div>

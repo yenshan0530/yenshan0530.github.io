@@ -1,0 +1,23 @@
+intro: Essays, notes, and half-formed thoughts.
+
+# Categories drive the filter buttons on /writing/.
+# The `slug` is what each post's front matter references as `category:`.
+# Add, rename, or delete freely — the filter bar is generated from this list.
+
+categories:
+
+  - slug: academic-journey
+    name: academic journey
+    description: Double majoring in econ and CS, research, and everything around it.
+
+  - slug: random-thoughts
+    name: random thoughts
+    description: Short, unfinished, occasionally wrong.
+
+  - slug: philosophy
+    name: philosophy
+    description: The bigger questions, taken slowly.
+
+  - slug: events
+    name: event recording
+    description: Notes from talks, conferences, and things worth remembering.

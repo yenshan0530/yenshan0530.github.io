@@ -1,0 +1,14 @@
+<!-- Updates section -->
+
+<hr>
+<div class="row" id="updates">
+    <div class="col">
+        <h2 class="mb-3">📜 Updates</h2>
+        <div class="updates-log">
+            {% for update in site.data.updates.updates %}
+                {% include_relative _libs/updates_widget.html %}
+            {% endfor %}
+        </div>
+        <p></p>
+    </div>
+</div>
