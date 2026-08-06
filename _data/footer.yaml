@@ -4,7 +4,7 @@ logos:
   #   logo_alt_text: "Org Name"
 
 # Link to this site's own source code. Leave blank to hide.
-source: https://github.com/yenshan0530/Popsicle-Monster
+source: https://github.com/yenshan0530/yenshan0530.github.io
 
 
 # ---------------------------------------------------------------------------
@@ -17,9 +17,9 @@ source: https://github.com/yenshan0530/Popsicle-Monster
 #     reloads, bots and proxy prefetches all increment the same number.
 #
 #     TO RESET: hits.sh has no reset button — the count is keyed off this exact
-#     URL path. Change the path (e.g. bump `/site` to `/site2`) and the badge
-#     starts from zero. The old key keeps its count but nothing points at it.
-counter: https://hits.sh/github.com/yenshan0530/Popsicle-Monster/site.svg?style=flat-square&label=views&color=bd5d38
+#     URL path. Change the path (append a suffix, e.g. `.github.io-2`) and the
+#     badge starts from zero. The old key keeps its count, unreferenced.
+counter: https://hits.sh/yenshan0530.github.io.svg?style=flat-square&label=views&color=bd5d38
 
 # (b) GoatCounter — counts UNIQUE VISITORS. Free for personal sites, no cookies:
 #     it derives an in-memory session key from (site + User-Agent + IP), keeps it
