@@ -201,6 +201,14 @@ function showPageProjects(n) {
 }
 
 function updatePagerProjects() {
+    // Nothing to page through until the publication list outgrows one page, so
+    // don't render "previous / page 1 of 1 / next" with both buttons dead.
+    // It comes back on its own once there are enough entries.
+    if (currentNumberPages <= 1) {
+        $('.' + pagerClass).remove();
+        return;
+    }
+
     var $isotopePager = ($('.' + pagerClass).length == 0)
         ? $('<div class="' + pagerClass + '"></div>')
         : $('.' + pagerClass);

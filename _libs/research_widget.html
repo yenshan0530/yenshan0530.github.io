@@ -28,10 +28,14 @@
             <br>
             {% if project.pdf %} <a href="{{ project.pdf }}" target="_blank" rel="noopener">[PDF]</a> {% endif %}
             {% if project.code %} | <a href="{{ project.code }}" target="_blank" rel="noopener">[CODE]</a> {% endif %}
-            {% if project.demo %} | <a href="{{ project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
             {% if project.slides %} | <a href="{{ project.slides }}" target="_blank" rel="noopener">[SLIDES]</a> {% endif %}
             {% if project.talk %} | <a href="{{ project.talk }}" target="_blank" rel="noopener">[TALK]</a> {% endif %}
+            {%- comment -%}
+            [DEMO] and [POSTER] hidden for now. The `demo` and `poster` values are
+            still in _data/research.yaml, so uncommenting restores them as-is.
+            {% if project.demo %} | <a href="{{ project.demo }}" target="_blank" rel="noopener">[DEMO]</a> {% endif %}
             {% if project.poster %} | <a href="{{ project.poster }}" target="_blank" rel="noopener">[POSTER]</a> {% endif %}
+            {%- endcomment -%}
             <br>
             <u><b><i>Abstract</i></b>:</u>
             {{ project.abstract-less }}
