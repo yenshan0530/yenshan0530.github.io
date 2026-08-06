@@ -946,12 +946,15 @@ code {
 .paper-figure:hover {
     opacity: 1;
 }
-@media (max-width: 576px) {
-    /* Stacked layout: keep it a preview strip, not a hero image.
-       Centring is moot once stacked, so restore the gap above the title. */
+/* Below Bootstrap's `sm` breakpoint the columns stack, so the figure gets the
+   full content width instead of a narrow side column — let it fill that width
+   at its natural height rather than staying a thumbnail. 575.98px matches
+   Bootstrap exactly, so this never overlaps the side-by-side layout. */
+@media (max-width: 575.98px) {
     .paper-figure {
-        max-height: 110px;
-        margin-bottom: 0.75rem;
+        width: 100%;
+        max-height: none;
+        margin-bottom: 0.9rem;
     }
 }
 
