@@ -410,28 +410,31 @@ code {
 }
 
 
-/* Project list — each publication sits in its own tinted block so entries read
-   as separate items rather than one run-on column. The tint needs a different
-   value per theme: a light-grey wash is invisible on the #333 dark background,
-   so dark mode lifts a white overlay instead of laying down a dark one. */
+/* Project list — publications are separated by a thin accent rule rather than a
+   filled block, which keeps the page quiet while still breaking entries apart.
+   Dark mode uses a lighter orange: the base accent is too close in value to the
+   #333 background to register as a line. */
 #projects {
     margin: 0px;
 }
 .project {
-    margin: 0 0 1.1rem 0;
-    padding: 1.15rem 1.35rem;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    background-color: rgba(128, 128, 128, 0.05);
-    transition: background-color 0.5s, border-color 0.5s;
-}
-.light-theme .project {
-    background-color: rgba(0, 0, 0, 0.035);
-    border-color: rgba(0, 0, 0, 0.055);
+    margin: 0;
+    padding: 1.5rem 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(189, 93, 56, 0.4);
+    border-radius: 0;
+    transition: border-color 0.5s;
 }
 .dark-theme .project {
-    background-color: rgba(255, 255, 255, 0.06);
-    border-color: rgba(255, 255, 255, 0.08);
+    border-bottom-color: rgba(207, 122, 90, 0.55);
+}
+.project:first-child {
+    padding-top: 0.5rem;
+}
+.project:last-child {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
 }
 
 
