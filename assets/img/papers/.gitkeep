@@ -1,0 +1,7 @@
+Paper figures go here.
+
+Reference them from _data/research.yaml with a leading slash:
+    figure: /assets/img/papers/tracesafe.svg
+
+PDFs cannot be used directly in an <img> tag — convert first.
+SVG if the figure is vector; PNG/WebP at ~800px wide if it has raster content.

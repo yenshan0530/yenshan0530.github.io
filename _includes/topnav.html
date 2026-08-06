@@ -1,6 +1,10 @@
 <nav class="topnav">
     <a class="nav-brand" href="/">{{ site.title }}</a>
-    <div class="nav-links">
+
+    <button class="nav-toggle" id="nav-toggle" type="button"
+            aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">≡</button>
+
+    <div class="nav-links" id="nav-links">
         {% for link in site.data.nav.links %}
             {% if link.url == '/' %}
                 {% assign is_active = false %}

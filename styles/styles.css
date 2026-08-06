@@ -110,6 +110,67 @@ hightlight {
 }
 
 
+/* Hamburger — hidden until the bar gets cramped on narrow screens */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #bd5d38;
+    font-size: 1.9rem;
+    line-height: 1;
+    padding: 0 0.2rem;
+    cursor: pointer;
+}
+.nav-toggle:hover {
+    color: #824027;
+}
+
+@media (max-width: 768px) {
+    .topnav {
+        padding: 0 1rem;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.3rem 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .light-theme .nav-links {
+        background-color: #f5f5f5;
+    }
+    .dark-theme .nav-links {
+        background-color: #222222;
+    }
+    /* Underlines read as tabs; in a stacked menu use a row highlight instead */
+    .nav-links a {
+        padding: 0.75rem 1.25rem;
+        border-bottom: none;
+        font-size: 1rem;
+    }
+    .nav-links a:hover {
+        border-bottom-color: transparent;
+        background-color: rgba(189, 93, 56, 0.08);
+        text-decoration: none;
+    }
+    .nav-links a.active {
+        border-bottom-color: transparent;
+        background-color: rgba(189, 93, 56, 0.13);
+    }
+}
+
+
 /* Code-style text */
 code {
     font-family: "Consolas";

@@ -1,9 +1,15 @@
+{%- assign textcol = 'col-sm-12' -%}
+{%- if project.figure -%}{%- assign textcol = 'col-sm-8' -%}{%- endif -%}
+
 <div class="project" data-filter="{{ project.category }}">
     <div class="row mb-4">
-        <div class="col-sm-4">
-            <img width="100%" height="auto" class="w-full rounded-lg" src="{{ project.gif }}">
-        </div>
-        <div class="col-sm-8">
+        {% if project.figure %}
+            <div class="col-sm-4">
+                <img width="100%" height="auto" class="w-full rounded-lg paper-figure"
+                     src="{{ project.figure }}" alt="{{ project.title }} figure" loading="lazy">
+            </div>
+        {% endif %}
+        <div class="{{ textcol }}">
             {% if project.system-name %} <b><i>{{ project.system-name }}</i>:</b> {% endif %}
             <b>{{ project.title }}</b>
             <br>

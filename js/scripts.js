@@ -1,3 +1,45 @@
+// Mobile nav: ≡ opens the menu once the top bar is too narrow for tabs
+(function () {
+    var toggle = document.getElementById('nav-toggle');
+    var links = document.getElementById('nav-links');
+    if (!toggle || !links) return;
+
+    function closeMenu() {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        toggle.textContent = '≡';
+    }
+
+    function openMenu() {
+        links.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Close menu');
+        toggle.textContent = '×';
+    }
+
+    toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (links.classList.contains('open')) closeMenu(); else openMenu();
+    });
+
+    // Tapping a destination, tapping away, or Esc all dismiss it
+    Array.prototype.forEach.call(links.querySelectorAll('a'), function (a) {
+        a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('click', function (e) {
+        if (links.classList.contains('open') && !links.contains(e.target)) closeMenu();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+    });
+    // Rotating to landscape shows the tabs again; drop the stale open state
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) closeMenu();
+    });
+})();
+
+
 // Back-to-top button
 var btn = $('#back-to-top-button');
 

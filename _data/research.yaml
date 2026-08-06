@@ -1,3 +1,12 @@
+# Paper figures
+# ---------------------------------------------------------------------------
+# Put them in assets/img/papers/ and reference with a LEADING SLASH:
+#     figure: /assets/img/papers/<slug>.svg
+#
+# PDFs cannot go in an <img> tag — convert first (see below). SVG is best if
+# the figure is vector; PNG/WebP at 2x if it contains photos or raster plots.
+# Leave `figure` commented out and the entry renders full-width, no broken image.
+
 categories:
 
   - data-filter: llm-safety
@@ -14,7 +23,7 @@ projects:
 
   - title: "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories"
     system-name: TraceSafe
-    gif: assets/img/tracesafe.gif        # TODO: drop in your figure
+    # figure: /assets/img/papers/tracesafe.svg
     conference: Conference on Language Modeling (COLM 2026, San Francisco, CA)
     conference-web: https://colmweb.org/
     status:
@@ -40,7 +49,7 @@ projects:
 
   - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
     system-name: Latent-Mark
-    gif: assets/img/latent-mark.gif      # TODO: drop in your figure
+    # figure: /assets/img/papers/latent-mark.svg
     conference: Interspeech 2026 (Sydney, Australia)
     conference-web: https://interspeech2026.org/
     status:
@@ -67,7 +76,7 @@ projects:
 
   - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
     system-name: Eyes-on-Me
-    gif: assets/img/eyes-on-me.gif       # TODO: drop in your figure
+    # figure: /assets/img/papers/eyes-on-me.svg
     conference: Forty-Third International Conference on Machine Learning (ICML 2026, Seoul)
     conference-web: https://icml.cc/Conferences/2026
     status:
@@ -93,7 +102,7 @@ projects:
 
   - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
     system-name: Expected Harm
-    gif: assets/img/expected-harm.gif    # TODO: drop in your figure
+    # figure: /assets/img/papers/expected-harm.svg
     conference: arXiv preprint arXiv:2602.01600
     conference-web:
     status: Preprint
@@ -121,7 +130,7 @@ projects:
 
   - title: LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation
     system-name:
-    gif: assets/img/biased-evaluators.gif  # TODO: drop in your figure
+    # figure: /assets/img/papers/biased-evaluators.svg
     conference: Findings of the Association for Computational Linguistics (ACL 2025, Vienna, Austria)
     conference-web: https://2025.aclweb.org/
     status:
