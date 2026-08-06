@@ -1,30 +1,58 @@
-intro: Odds and ends — things that don't fit anywhere else.
+intro: Talks, awards, service, and odds and ends.
 
 # Each group renders as a heading + a list.
 # Every item takes: text (required), url (optional link), note (optional aside).
-# Delete or rename any group; add as many as you like.
 
 groups:
 
-  - heading: Currently
+  - heading: Selected Talks
     items:
-      - text: "Reading — book title"
-      - text: "Listening to — album or artist"
-      - text: "Playing with — a tool or side project"
+      - text: "One Poisoned Artifact Can Steer Your AI: How Robust Are Your LLM-Assisted Security Workflows?"
+        note: "FIRST CON, Denver, June 2026 — with Cheng-Lin Yang"
+      - text: "One Bad OSINT Can Ruin Everything: How Secure is Your CTI RAG System?"
+        note: "FIRST CTI, Munich, April 2026"
+      - text: "BullyRAG: A Multi-Perspective RAG Robustness Evaluation Framework"
+        note: "Code BLUE, Tokyo, October 2024"
+      - text: "LLMs Bear the BOT, Yet Swallow Up: Attacks Against RAG Models"
+        note: "SINCON, Singapore, August 2024"
 
-  - heading: Bookmarks
+  - heading: Awards & Honors
     items:
-      - text: "A link worth keeping"
-        url: "https://example.com"
-        note: "why it's worth keeping"
-      - text: "Another one"
-        url: "https://example.com"
+      - text: "Outstanding Bachelor's Thesis Award"
+        note: "top 2 among 170+ students, 2025"
+      - text: "Garmin Student Scholarship"
+        note: "1 of 14 STEM graduate students nationwide, Taiwan, 2025"
+      - text: "E.SUN Bank Graduate Student Scholarship"
+        note: "2025"
+      - text: "ACLCLP Student Travel Grant"
+        note: "2025"
+      - text: "ICPC Asia Taoyuan Regional — Silver Award & Best Female Team Award"
+        note: "2023"
+      - text: "Presidential Award, National Taiwan University (×2)"
+        note: "top 5% of class"
+      - text: "National First Prize, Girls in CyberSecurity Contest"
+        note: "2022, on smart healthcare vulnerabilities"
+      - text: "Fu Bell Scholarship"
+        note: "2021, one student per department"
+      - text: "Excellent Teaching Assistant Certificate"
+        note: "top 10% university-wide"
 
-  - heading: Talks & Service
+  - heading: Service
     items:
-      - text: "Reviewer, Conference Name (Year)"
-      - text: "Invited talk — talk title"
-        note: "Venue, Month Year"
+      - text: "Reviewer — COLM 2026, NeurIPS 2026; Sub-reviewer — ICML 2026"
+      - text: "Taiwan AI Safety Club"
+        note: "weekly discussions on alignment, robustness, and interpretability"
+      - text: "Ambassador, Girls in CyberSecurity"
+        note: "mentoring on adversarial ML and security research"
+
+  - heading: Teaching
+    items:
+      - text: "Foundations of Artificial Intelligence"
+        note: "Lead TA, Spring 2026 — built a multi-agent game engine for the tournament final"
+      - text: "Applied Deep Learning"
+        note: "TA, Fall 2025 — designed a two-stage adversarial jailbreak challenge for 150+ students"
+      - text: "Calculus & Algorithm Design"
+        note: "TA, 2022–2023 — 300+ students"
 
   - heading: Random
     items:

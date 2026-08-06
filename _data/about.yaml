@@ -10,7 +10,8 @@ desc-emoji: NaCl₃ = 鹽三 = 妍姍
 # social links (leave blank to hide icon)
 scholar: https://scholar.google.com/citations?user=NwXW5KQAAAAJ&hl=en&authuser=1
 github: http://github.com/yenshan0530
-linkedin: https://www.linkedin.com/in/yen-shan-chen-667847263/
+linkedin: https://www.linkedin.com/in/yen-shan-lily-chen    # vanity URL from your CV
+email: yenshan.ntu@gmail.com
 youtube:
 resume: /assets/cv/lily-chen-cv.pdf   # keep this filename stable so the link never breaks
 projects:                             # show or leave blank
@@ -19,15 +20,31 @@ codepen:
 orcid:
 
 # about me paragraphs
-first-paragraph: Write your first bio paragraph here.
-second-paragraph: Write your second bio paragraph here.
+# DRAFT — assembled from your CV. Please rewrite in your own voice; I have kept
+# it to things the CV states outright rather than inventing any framing.
+first-paragraph: >-
+  I am an M.S. student in Computer Science and Information Engineering at
+  <b>National Taiwan University</b>, where I work in the Machine Intelligence and
+  Understanding Lab with Prof. Yun-Nung Chen. I am also a Data Scientist at
+  <b>CyCraft Technology</b>. I finished my B.S. at NTU in CSIE with a double major
+  in Economics.
+
+second-paragraph: >-
+  I work on the safety and robustness of large language models — how they fail,
+  how to measure those failures honestly, and how to attack the systems we build
+  on top of them. Previously I spent a summer at <b>Caltech</b> with Prof. Colin
+  Camerer studying rational inattention through eye-tracking, and interned on the
+  <b>Google</b> Pixel Camera team, where my work fed into the Guided Frame feature.
 
 # research/work interests (shown in code-style box)
-research-introduction: Brief description of your research or work focus.
+research-introduction: Research interests
 
 research-interests:
-  - field: Area 1
-    subfields: subfield a, subfield b
+  - field: AI Safety & Evaluation
+    subfields: safety metrics, jailbreak benchmarking, LLM guardrails, trajectory-level agent safety
 
-  - field: Area 2
-    subfields: subfield c, subfield d
+  - field: Adversarial Robustness
+    subfields: RAG poisoning, attention-steering attacks, audio watermarking
+
+  - field: LLM Behaviour
+    subfields: self-preferential bias, LLM-as-judge, mechanistic interpretability

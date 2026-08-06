@@ -4,10 +4,24 @@
 <div class="row" id="updates">
     <div class="col">
         <h2 class="mb-3">📜 Updates</h2>
+
+        {%- assign cap = site.data.updates.visible | default: 5 -%}
+        {%- assign all = site.data.updates.updates -%}
+
         <div class="updates-log">
-            {% for update in site.data.updates.updates %}
+            {% for update in all limit: cap %}
                 {% include_relative _libs/updates_widget.html %}
             {% endfor %}
+
+            {% if all.size > cap %}
+                <div class="updates-extra" id="updates-extra" hidden>
+                    {% for update in all offset: cap %}
+                        {% include_relative _libs/updates_widget.html %}
+                    {% endfor %}
+                </div>
+                <button class="updates-more" id="updates-more"
+                        data-more="show all {{ all.size }} updates">show all {{ all.size }} updates</button>
+            {% endif %}
         </div>
         <p></p>
     </div>

@@ -40,6 +40,24 @@
 })();
 
 
+// Updates list: show a few, expand the rest in place
+(function () {
+    var btn = document.getElementById('updates-more');
+    var extra = document.getElementById('updates-extra');
+    if (!btn || !extra) return;
+
+    btn.addEventListener('click', function () {
+        if (extra.hasAttribute('hidden')) {
+            extra.removeAttribute('hidden');
+            btn.textContent = 'show fewer';
+        } else {
+            extra.setAttribute('hidden', '');
+            btn.textContent = btn.getAttribute('data-more');
+        }
+    });
+})();
+
+
 // Back-to-top button
 var btn = $('#back-to-top-button');
 

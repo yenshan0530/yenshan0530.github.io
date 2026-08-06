@@ -1,7 +1,40 @@
+# How many show before the "show all" button. Newest first.
+visible: 5
+
 updates:
 
   - time: Aug 6, 2026
     desc: I finally made a personal website! <hightlight>Welcome</hightlight> 🎉
 
-# Copy the shape above for new entries — newest first.
+  - time: Jul 2026
+    desc: Presented <hightlight>Eyes-on-Me</hightlight> at <a href="https://icml.cc/Conferences/2026" target="_blank" rel="noopener">ICML 2026</a> in Seoul.
+
+  # NOTE: titles contain ": " — YAML reads that as a mapping in a plain scalar,
+  # so anything with a colon must be quoted or use a >- block like these.
+  - time: Jun 2026
+    desc: >-
+      Talk at <hightlight>FIRST CON</hightlight>, Denver — "One Poisoned Artifact Can
+      Steer Your AI: How Robust Are Your LLM-Assisted Security Workflows?"
+
+  - time: Apr 2026
+    desc: >-
+      Talk at <hightlight>FIRST CTI</hightlight>, Munich — "One Bad OSINT Can Ruin
+      Everything: How Secure is Your CTI RAG System?"
+
+  - time: 2026
+    desc: <hightlight>TraceSafe</hightlight> accepted to COLM 2026 and <hightlight>Latent-Mark</hightlight> to Interspeech 2026.
+
+  - time: Sep 2025
+    desc: Started my <hightlight>M.S. in CSIE</hightlight> at National Taiwan University, and moved from intern to Data Scientist at CyCraft.
+
+  - time: Jul 2025
+    desc: Presented at <a href="https://2025.aclweb.org/" target="_blank" rel="noopener">ACL 2025</a> in Vienna.
+
+  - time: Jun 2025
+    desc: Received the <hightlight>Outstanding Bachelor's Thesis Award</hightlight> (top 2 of 170+) for work on self-preferential bias in LLMs.
+
+  - time: 2025
+    desc: Awarded the Garmin Student Scholarship and the E.SUN Bank Graduate Student Scholarship.
+
 # `desc` accepts HTML: <a href="#">links</a> and <hightlight>highlights</hightlight> both render.
+# (Yes, the tag is spelled "hightlight" — that typo is baked into the theme's CSS.)
