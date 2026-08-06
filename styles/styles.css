@@ -256,10 +256,10 @@ code {
 
 
 /* Emoji indicator on profile photo */
-/* Anchored by its RIGHT edge, not its left. The pill grows when the label is
-   revealed, and a left anchor makes it grow rightwards — off the screen edge on
-   a phone. Pinning the right edge makes it expand inwards over the photo instead.
-   right: 14px == 192px ring - 135px offset - 43px badge, so it sits where it did. */
+/* The badge grows into a pill when its label is revealed, and whichever edge is
+   anchored decides which way it grows. On desktop there is room to the right, so
+   anchor the left edge and let it open outwards. On a phone the ring is centred
+   and the same behaviour runs off the screen, so the anchor flips below. */
 .emoji-indicator {
     font-size: medium;
     width: 43px;
@@ -271,10 +271,21 @@ code {
     background-color: #efefef;
     position: absolute;
     top: 141px;
-    right: 14px;
-    left: auto;
+    left: 135px;
+    right: auto;
     max-width: calc(100vw - 2rem);
     z-index: 1000;
+}
+
+/* Phones: columns stack and the ring centres, leaving only ~150px to the right
+   of the badge — not enough for the label. Anchor the right edge instead so the
+   pill opens leftwards over the photo. right: 14px == 192 ring - 135 - 43 badge,
+   so the resting position is identical either way. */
+@media (max-width: 575.98px) {
+    .emoji-indicator {
+        left: auto;
+        right: 14px;
+    }
 }
 .light-theme .emoji-indicator {
     background-color: #efefef;
