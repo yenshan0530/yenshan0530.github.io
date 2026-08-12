@@ -993,6 +993,35 @@ code {
     }
 }
 
+/* Opt-in per paper (`figure-fill: true` in _data/research.yaml): tall/portrait
+   figures that would shrink to a sliver under the uniform 130px cap instead
+   match the height of the entry's collapsed text block. The text column sets
+   the row height; this column stretches to it and the image fills it from
+   outside the flow, so it can never make the row taller itself. Expanding the
+   abstract lets the figure grow until the column width caps it. */
+@media (min-width: 576px) {
+    .figure-fill-col {
+        align-self: stretch;
+        position: relative;
+    }
+    .figure-fill-col .paper-figure {
+        position: absolute;
+        top: 0;
+        left: 15px;                  /* stay inside the column's gutter padding */
+        width: calc(100% - 30px);
+        height: 100%;
+        max-height: none;
+        margin: 0;
+    }
+}
+/* Stacked phone layout: natural height would be ~130% of the screen width for
+   a portrait figure, so cap it and let object-fit keep the aspect ratio. */
+@media (max-width: 575.98px) {
+    .figure-fill-col .paper-figure {
+        max-height: 21rem;
+    }
+}
+
 
 /* Equal-contribution note under a paper's author list */
 .equal-contrib {

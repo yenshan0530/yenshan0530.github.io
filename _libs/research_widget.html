@@ -4,7 +4,7 @@
 <div class="project" data-filter="{{ project.category }}">
     <div class="row">
         {% if project.figure %}
-            <div class="col-sm-3 align-self-center">
+            <div class="col-sm-3 {% if project.figure-fill %}figure-fill-col{% else %}align-self-center{% endif %}">
                 <img class="rounded-lg paper-figure" src="{{ project.figure }}"
                      alt="{{ project.title }} figure" loading="lazy"
                      data-full="{{ project.figure }}" data-caption="{{ project.title }}">

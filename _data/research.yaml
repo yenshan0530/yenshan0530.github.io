@@ -80,6 +80,8 @@ projects:
   - title: "Avalon-ToM-Bench: Evaluating Fine-Grained Theory of Mind via Asymmetric Game Mechanics"
     system-name: Avalon-ToM-Bench
     figure: /assets/img/papers/tom-avalon.png
+    # Portrait figure — fill the collapsed entry's height instead of the 130px thumbnail cap.
+    figure-fill: true
     conference: arXiv preprint arXiv:2608.09638
     conference-web:
     status: Preprint
