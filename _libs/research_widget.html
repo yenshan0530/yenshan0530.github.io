@@ -11,8 +11,17 @@
             </div>
         {% endif %}
         <div class="{{ textcol }}">
+            {%- comment -%}
+            Most titles already start with "SystemName: ..." — strip that prefix
+            so the styled system name doesn't render it twice.
+            {%- endcomment -%}
+            {%- assign display-title = project.title -%}
+            {%- if project.system-name -%}
+                {%- assign name-prefix = project.system-name | append: ': ' -%}
+                {%- assign display-title = project.title | remove_first: name-prefix -%}
+            {%- endif -%}
             {% if project.system-name %} <b><i>{{ project.system-name }}</i>:</b> {% endif %}
-            <b>{{ project.title }}</b>
+            <b>{{ display-title }}</b>
             <br>
             {% if project.conference-web %}
                 <i><a href="{{ project.conference-web }}" target="_blank" rel="noopener">{{ project.conference }}</a></i>
