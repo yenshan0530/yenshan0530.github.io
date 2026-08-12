@@ -7,19 +7,17 @@
 # the figure is vector; PNG/WebP at 2x if it contains photos or raster plots.
 # Leave `figure` commented out and the entry renders full-width, no broken image.
 
+# Filter groups mirror the three research interests in _data/about.yaml.
 categories:
 
-  - data-filter: llm-safety
-    category-name: llm safety
+  - data-filter: safety-eval
+    category-name: ai safety & evaluation
 
-  - data-filter: rag
-    category-name: rag
+  - data-filter: adversarial-robustness
+    category-name: adversarial robustness
 
-  - data-filter: audio
-    category-name: audio
-
-  - data-filter: tom
-    category-name: theory of mind
+  - data-filter: llm-behaviour
+    category-name: llm behaviour
 
 
 projects:
@@ -48,7 +46,7 @@ projects:
       driven more by structural data competence than by semantic safety alignment, and that
       architecture matters more than scale.
     tag: more_tracesafe
-    category: llm-safety
+    category: safety-eval
 
   - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
     system-name: Latent-Mark
@@ -75,7 +73,7 @@ projects:
       surrogate codecs, yielding zero-shot transferability to unseen neural codecs and
       state-of-the-art resilience to DSP attacks while preserving imperceptibility.
     tag: more_latentmark
-    category: audio
+    category: adversarial-robustness
 
   - title: "Avalon-ToM-Bench: Evaluating Fine-Grained Theory of Mind via Asymmetric Game Mechanics"
     system-name: Avalon-ToM-Bench
@@ -108,7 +106,7 @@ projects:
       reasoning training yields substantial gains while test-time deliberation adds little
       (+11.0 versus +1.1 points on average).
     tag: more_avalontom
-    category: tom
+    category: llm-behaviour
 
   - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
     system-name: Eyes-on-Me
@@ -134,7 +132,7 @@ projects:
       over prior work), and a single optimized attractor transfers to unseen black-box retrievers
       and generators without retraining.
     tag: more_eyesonme
-    category: rag
+    category: adversarial-robustness
 
   - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
     system-name: Expected Harm
@@ -162,7 +160,7 @@ projects:
       probing shows models encode severity in their latent space but have no distinguishable
       internal representation of execution cost.
     tag: more_expectedharm
-    category: llm-safety
+    category: safety-eval
 
   - title: LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation
     system-name:
@@ -189,4 +187,4 @@ projects:
       self-preference effect in RAG; instead, factual accuracy drives LLM output even without
       prior knowledge. Results hold across three QA datasets and five widely adopted models.
     tag: more_biasedeval
-    category: rag
+    category: llm-behaviour
