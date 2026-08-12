@@ -18,6 +18,9 @@ categories:
   - data-filter: audio
     category-name: audio
 
+  - data-filter: tom
+    category-name: theory of mind
+
 
 projects:
 
@@ -73,6 +76,37 @@ projects:
       state-of-the-art resilience to DSP attacks while preserving imperceptibility.
     tag: more_latentmark
     category: audio
+
+  - title: "Avalon-ToM-Bench: Evaluating Fine-Grained Theory of Mind via Asymmetric Game Mechanics"
+    system-name: Avalon-ToM-Bench
+    figure: /assets/img/papers/tom-avalon.png
+    conference: arXiv preprint arXiv:2608.09638
+    conference-web:
+    status: Preprint
+    authors: <u>Yen-Shan Chen</u>, Yu Chian Duan*, Chih-En Kuo*, Jian-Bin Wu*, Yun-Nung Chen.
+    equal-contrib: true
+    pdf: https://arxiv.org/abs/2608.09638
+    code: https://github.com/yenshan0530/Avalon-ToM-Bench
+    demo:
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      Theory of Mind (ToM) is essential for agent interactions, yet existing evaluations either
+      rely on static scenarios that oversimplify mental-state reasoning or interactive settings
+      that provide limited diagnostic insight.
+    abstract-more: >-
+      We present Avalon-ToM-Bench, a fine-grained benchmark that operationalizes ToM through the
+      asymmetric-information mechanics of The Resistance: Avalon, decomposing it into a 2×2
+      taxonomy — epistemic versus motivational reasoning crossed with inference versus action —
+      using human-crafted, perspective-constrained queries. Benchmarking 28 LLMs reveals that
+      models grasp game rules but fail at social reasoning; that models often represent correct
+      mental-state inferences in hidden states yet fail to express them (linear probes recover
+      77–82% accuracy versus 62–70% from the models' own chain-of-thought); and that dedicated
+      reasoning training yields substantial gains while test-time deliberation adds little
+      (+11.0 versus +1.1 points on average).
+    tag: more_avalontom
+    category: tom
 
   - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
     system-name: Eyes-on-Me
