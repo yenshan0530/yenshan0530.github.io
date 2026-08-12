@@ -56,7 +56,7 @@ projects:
     authors: <u>Yen-Shan Chen</u>*, Shih-Yu Lai*, Ying-Jung Tsou, Yi-Cheng Lin, Bing-Yu Chen, Yun-Nung Chen, Hung-yi Lee, Shang-Tse Chen.
     equal-contrib: true
     pdf: https://arxiv.org/abs/2603.05310
-    code:
+    code: https://github.com/yenshan0530/Latent-Mark
     demo:
     slides:
     talk:
@@ -82,7 +82,7 @@ projects:
     status:
     authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
     pdf: https://arxiv.org/abs/2510.00586
-    code:
+    code: https://github.com/cycraft-corp/Eye-on-Me
     demo: https://openreview.net/forum?id=ChfIF8UZ6X
     slides:
     talk:
@@ -137,7 +137,7 @@ projects:
     authors: <u>Yen-Shan Chen</u>*, Jing Jin*, Peng-Ting Kuo, Chao-Wei Huang, Yun-Nung Chen.
     equal-contrib: true
     pdf: https://aclanthology.org/2025.findings-acl.1369/
-    code:
+    code: https://github.com/MiuLab/RAG-Self-Preference
     demo:
     slides:
     talk:
