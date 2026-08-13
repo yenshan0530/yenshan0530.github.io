@@ -6,9 +6,13 @@
         <h2 class="mb-5">📚 Publications</h2>
         <p></p>
         <div id="filters-project">
-            <button class="filter-button active" data-filter="*">all</button>
+            <button class="filter-button active" data-filter="*">all <span class="filter-count">{{ site.data.research.projects | size }}</span></button>
             {% for category in site.data.research.categories %}
-                <button class="filter-button" data-filter="{{ category.data-filter }}">{{ category.category-name }}</button>
+                {%- assign n = 0 -%}
+                {%- for project in site.data.research.projects -%}
+                    {%- if project.category == category.data-filter -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+                {%- endfor -%}
+                <button class="filter-button" data-filter="{{ category.data-filter }}">{{ category.category-name }} <span class="filter-count">{{ n }}</span></button>
             {% endfor %}
         </div>
         <p></p>

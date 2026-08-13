@@ -11,13 +11,13 @@
 categories:
 
   - data-filter: safety-eval
-    category-name: ai safety & evaluation
+    category-name: AI Safety & Evaluation
 
   - data-filter: adversarial-robustness
-    category-name: adversarial robustness
+    category-name: Adversarial Robustness
 
   - data-filter: llm-behaviour
-    category-name: llm behaviour
+    category-name: LLM Behaviour
 
 
 projects:

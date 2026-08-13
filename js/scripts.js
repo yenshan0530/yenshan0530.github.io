@@ -198,6 +198,10 @@ function showPageProjects(n) {
     category += (currentFilter != '*') ? '[' + filterAtribute + '="' + currentFilter + '"]' : '';
     category += '[' + pageAtribute + '="' + currentPage + '"]';
     filterCategoryProjects(category);
+    // With filtering + pagination the visually-last entry is rarely the DOM
+    // :last-child, so mark it explicitly to drop its bottom divider.
+    $projects.children('.project').removeClass('no-divider');
+    $projects.children(category).last().addClass('no-divider');
 }
 
 function updatePagerProjects() {
