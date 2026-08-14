@@ -111,10 +111,12 @@ function toggleTheme() {
         bodyEl.classList.remove('light-theme');
         bodyEl.classList.add('dark-theme');
         buttonEl.innerText = '☀️';
+        localStorage.setItem('theme', 'dark');
     } else {
         bodyEl.classList.remove('dark-theme');
         bodyEl.classList.add('light-theme');
         buttonEl.innerText = '🌙';
+        localStorage.setItem('theme', 'light');
     }
 }
 
@@ -300,12 +302,11 @@ $(document).ready(function() {
 } // end #projects guard
 
 
-// Set theme based on time of day (dark 7PM–7AM, light otherwise)
+// Theme: light by default; the toggle's choice is remembered across visits
 document.addEventListener('DOMContentLoaded', function() {
     const buttonEl = document.querySelector('.toggle-theme-button');
-    var currentHour = new Date().getHours();
 
-    if (currentHour > 19 || currentHour <= 7) {
+    if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-theme');
         buttonEl.innerText = '☀️';
     } else {

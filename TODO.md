@@ -40,6 +40,7 @@ Running list of things to come back to. Not published — excluded from the Jeky
       `research-introduction` / `research-interests` yet, so the homepage bio is blank.
 - [ ] `_data/misc.yaml` groups are placeholders.
 - [ ] Nothing is committed to git yet.
+- [ ] Change COLM website to https://colm.eventhosts.cc
 
 ## Ideas
 
