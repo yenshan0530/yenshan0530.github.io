@@ -24,9 +24,10 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 
-        <!-- Leaflet (only on pages that declare `map: true`) -->
+        <!-- Leaflet + MapLibre (only on pages that declare `map: true`) -->
         {% if page.map %}
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+            <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"/>
         {% endif %}
 
         <!-- Core theme CSS -->
@@ -66,6 +67,9 @@
         <!-- Leaflet + travel map (only on pages that declare `map: true`) -->
         {% if page.map %}
             <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            <!-- pinned to 5.x: maplibre-gl 6+ ships no browser-global (UMD) build -->
+            <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+            <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
             <script src="/js/travel-map.js"></script>
         {% endif %}
 

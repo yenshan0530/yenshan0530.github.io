@@ -15,12 +15,14 @@
     var data = { home: null, trips: [] };
     try { data = JSON.parse(dataEl.textContent) || data; } catch (e) { /* keep defaults */ }
 
-    var TILES = {
-        light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-        dark:  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    // OpenFreeMap vector basemaps — free, no API key. positron/dark match the
+    // old CARTO raster styles; rendered by MapLibre GL via leaflet-maplibre-gl.
+    var STYLES = {
+        light: 'https://tiles.openfreemap.org/styles/positron',
+        dark:  'https://tiles.openfreemap.org/styles/dark'
     };
-    var ATTRIB = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> ' +
-                 'contributors &copy; <a href="https://carto.com/attributions">CARTO</a>';
+    var ATTRIB = '<a href="https://openfreemap.org">OpenFreeMap</a> &copy; ' +
+                 '<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
     var ACCENT = '#bd5d38';
     var HOME_COLOR = '#2d7d6f';
@@ -33,19 +35,24 @@
     var map = L.map('travel-map', {
         worldCopyJump: true,
         scrollWheelZoom: false,
-        minZoom: 1
+        minZoom: 1,
+        maxZoom: 18
     }).setView([num('data-center-lat', 20), num('data-center-lon', 10)], num('data-zoom', 2));
 
     function theme() {
         return document.body.classList.contains('dark-theme') ? 'dark' : 'light';
     }
 
-    var tiles = L.tileLayer(TILES[theme()], {
-        attribution: ATTRIB, subdomains: 'abcd', maxZoom: 19
-    }).addTo(map);
+    // Plain OSM raster tiles as a fallback if the MapLibre CDN scripts fail
+    var basemap = L.maplibreGL
+        ? L.maplibreGL({ style: STYLES[theme()], attribution: ATTRIB })
+        : L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          });
+    basemap.addTo(map);
 
     new MutationObserver(function () {
-        tiles.setUrl(TILES[theme()]);
+        if (basemap.getMaplibreMap) basemap.getMaplibreMap().setStyle(STYLES[theme()]);
     }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
 
     function esc(s) {
