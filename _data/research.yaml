@@ -137,9 +137,9 @@ projects:
   - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
     system-name: Expected Harm
     figure: /assets/img/papers/expected-harm.svg
-    conference: arXiv preprint arXiv:2602.01600
-    conference-web:
-    status: Preprint
+    conference: Conference on Neural Information Processing Systems, Evaluation & Datasets Track (NeurIPS 2026)
+    conference-web: https://neurips.cc/Conferences/2026
+    status: Spotlight (0.87%)
     authors: <u>Yen-Shan Chen</u>*, Zhi Rui Tam*, Cheng-Kuang Wu, Yun-Nung Chen.
     equal-contrib: true
     pdf: https://arxiv.org/abs/2602.01600

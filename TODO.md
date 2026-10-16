@@ -26,7 +26,7 @@ Running list of things to come back to. Not published — excluded from the Jeky
 
 - [ ] Paper figures: each entry in `_data/research.yaml` points at
       `assets/img/<slug>.gif` — drop in the real figures.
-- [ ] `Expected Harm` is marked `status: Preprint`. Update if it lands somewhere.
+- [x] `Expected Harm` accepted to NeurIPS 2026 (E&D Track, Spotlight).
 - [ ] `Latent-Mark` arXiv v3 is retitled "...Robust to Neural Codec Compression".
       Decide which title to display.
 

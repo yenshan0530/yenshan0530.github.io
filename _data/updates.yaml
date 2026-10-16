@@ -3,6 +3,12 @@ visible: 5
 
 updates:
 
+  - time: Sep 2026
+    desc: >-
+      <hightlight>Expected Harm</hightlight> accepted to
+      <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener">NeurIPS 2026</a>
+      (Evaluation &amp; Datasets Track) as a <hightlight>Spotlight</hightlight> (0.87%) 🎉
+
   - time: Aug 6, 2026
     desc: I finally made a personal website! <hightlight>Welcome</hightlight> 🎉
 
