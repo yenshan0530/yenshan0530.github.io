@@ -47,11 +47,15 @@ groups:
 
   - heading: Teaching
     items:
+      - text: "Applied Deep Learning"
+        note: "Final Project TA, Fall 2026"
       - text: "Foundations of Artificial Intelligence"
         note: "Lead TA, Spring 2026 — built a multi-agent game engine for the tournament final"
       - text: "Applied Deep Learning"
         note: "TA, Fall 2025 — designed a two-stage adversarial jailbreak challenge for 150+ students"
-      - text: "Calculus & Algorithm Design"
+      - text: "Algorithm Design"
+        note: "TA, 2023"
+      - text: "Calculus"
         note: "TA, 2022–2023 — 300+ students"
 
   - heading: Random

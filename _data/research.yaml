@@ -22,59 +22,6 @@ categories:
 
 projects:
 
-  - title: "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories"
-    system-name: TraceSafe
-    figure: /assets/img/papers/tracesafe.png
-    conference: Conference on Language Modeling (COLM 2026, San Francisco, CA)
-    conference-web: https://colmweb.org/
-    status:
-    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
-    pdf: https://arxiv.org/abs/2604.07223
-    code: https://github.com/cycraft-corp/TraceSafe
-    demo: https://huggingface.co/datasets/CyCraftAI/TraceSafe
-    slides:
-    talk:
-    poster:
-    abstract-less: >-
-      As LLMs evolve from static chatbots into autonomous agents, the primary vulnerability
-      surface shifts from final outputs to intermediate execution traces.
-    abstract-more: >-
-      We introduce TraceSafe-Bench, the first benchmark for mid-trajectory safety: 12 risk
-      categories spanning security threats (prompt injection, privacy leaks) and operational
-      failures (hallucinations, interface inconsistencies) across 1,000+ execution instances.
-      Evaluating 13 LLM-as-a-guard models and 7 specialized guardrails, we find efficacy is
-      driven more by structural data competence than by semantic safety alignment, and that
-      architecture matters more than scale.
-    tag: more_tracesafe
-    category: safety-eval
-
-  - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
-    system-name: Latent-Mark
-    figure: /assets/img/papers/latent-mark.png
-    conference: Interspeech 2026 (Sydney, Australia)
-    conference-web: https://interspeech2026.org/
-    status:
-    authors: <u>Yen-Shan Chen</u>*, Shih-Yu Lai*, Ying-Jung Tsou, Yi-Cheng Lin, Bing-Yu Chen, Yun-Nung Chen, Hung-yi Lee, Shang-Tse Chen.
-    equal-contrib: true
-    pdf: https://arxiv.org/abs/2603.05310
-    code: https://github.com/yenshan0530/Latent-Mark
-    demo:
-    slides:
-    talk:
-    poster:
-    abstract-less: >-
-      Existing audio watermarking techniques achieve strong robustness against traditional DSP
-      attacks but remain vulnerable to neural resynthesis, as modern neural audio codecs act as
-      semantic filters that discard the imperceptible waveform variations prior methods rely on.
-    abstract-more: >-
-      We present Latent-Mark, the first zero-bit audio watermarking framework designed to survive
-      semantic compression, embedding the watermark within the codec's invariant latent space
-      rather than the waveform. Cross-Codec Optimization jointly optimizes across multiple
-      surrogate codecs, yielding zero-shot transferability to unseen neural codecs and
-      state-of-the-art resilience to DSP attacks while preserving imperceptibility.
-    tag: more_latentmark
-    category: adversarial-robustness
-
   - title: "Avalon-ToM-Bench: Evaluating Fine-Grained Theory of Mind via Asymmetric Game Mechanics"
     system-name: Avalon-ToM-Bench
     figure: /assets/img/papers/tom-avalon.png
@@ -108,32 +55,6 @@ projects:
     tag: more_avalontom
     category: llm-behaviour
 
-  - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
-    system-name: Eyes-on-Me
-    figure: /assets/img/papers/eyes-on-me.png
-    conference: Forty-Third International Conference on Machine Learning (ICML 2026, Seoul)
-    conference-web: https://icml.cc/Conferences/2026
-    status:
-    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
-    pdf: https://arxiv.org/abs/2510.00586
-    code: https://github.com/cycraft-corp/Eye-on-Me
-    demo: https://openreview.net/forum?id=ChfIF8UZ6X
-    slides:
-    talk:
-    poster: https://icml.cc/virtual/2026/poster/61331
-    abstract-less: >-
-      Existing data poisoning attacks on retrieval-augmented generation (RAG) systems scale
-      poorly, as they require costly optimization of poisoned documents for each target phrase.
-    abstract-more: >-
-      We introduce Eyes-on-Me, a modular attack that decomposes an adversarial document into
-      reusable Attention Attractors and Focus Regions, adapting to new targets at near-zero cost
-      by steering a small subset of attention heads correlated with attack success. Across 18
-      end-to-end RAG settings, it raises average attack success rates from 21.9 to 57.8 (2.6x
-      over prior work), and a single optimized attractor transfers to unseen black-box retrievers
-      and generators without retraining.
-    tag: more_eyesonme
-    category: adversarial-robustness
-
   - title: "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs"
     system-name: Expected Harm
     figure: /assets/img/papers/expected-harm.svg
@@ -161,6 +82,85 @@ projects:
       internal representation of execution cost.
     tag: more_expectedharm
     category: safety-eval
+
+  - title: "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories"
+    system-name: TraceSafe
+    figure: /assets/img/papers/tracesafe.png
+    conference: Conference on Language Modeling (COLM 2026, San Francisco, CA)
+    conference-web: https://colmweb.org/
+    status:
+    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
+    pdf: https://arxiv.org/abs/2604.07223
+    code: https://github.com/cycraft-corp/TraceSafe
+    demo: https://huggingface.co/datasets/CyCraftAI/TraceSafe
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      As LLMs evolve from static chatbots into autonomous agents, the primary vulnerability
+      surface shifts from final outputs to intermediate execution traces.
+    abstract-more: >-
+      We introduce TraceSafe-Bench, the first benchmark for mid-trajectory safety: 12 risk
+      categories spanning security threats (prompt injection, privacy leaks) and operational
+      failures (hallucinations, interface inconsistencies) across 1,000+ execution instances.
+      Evaluating 13 LLM-as-a-guard models and 7 specialized guardrails, we find efficacy is
+      driven more by structural data competence than by semantic safety alignment, and that
+      architecture matters more than scale.
+    tag: more_tracesafe
+    category: safety-eval
+
+  - title: "Latent-Mark: An Audio Watermark Robust to Neural Resynthesis"
+    system-name: Latent-Mark
+    figure: /assets/img/papers/latent-mark.png
+    conference: Interspeech 2026 (Sydney, Australia)
+    conference-web: https://interspeech2026.org/
+    status: Long Oral
+    authors: <u>Yen-Shan Chen</u>*, Shih-Yu Lai*, Ying-Jung Tsou, Yi-Cheng Lin, Bing-Yu Chen, Yun-Nung Chen, Hung-yi Lee, Shang-Tse Chen.
+    equal-contrib: true
+    pdf: https://arxiv.org/abs/2603.05310
+    code: https://github.com/yenshan0530/Latent-Mark
+    demo:
+    slides:
+    talk:
+    poster:
+    abstract-less: >-
+      Existing audio watermarking techniques achieve strong robustness against traditional DSP
+      attacks but remain vulnerable to neural resynthesis, as modern neural audio codecs act as
+      semantic filters that discard the imperceptible waveform variations prior methods rely on.
+    abstract-more: >-
+      We present Latent-Mark, the first zero-bit audio watermarking framework designed to survive
+      semantic compression, embedding the watermark within the codec's invariant latent space
+      rather than the waveform. Cross-Codec Optimization jointly optimizes across multiple
+      surrogate codecs, yielding zero-shot transferability to unseen neural codecs and
+      state-of-the-art resilience to DSP attacks while preserving imperceptibility.
+    tag: more_latentmark
+    category: adversarial-robustness
+
+  - title: "Eyes-on-Me: Scalable RAG Poisoning through Transferable Attention-Steering Attractors"
+    system-name: Eyes-on-Me
+    figure: /assets/img/papers/eyes-on-me.png
+    conference: Forty-Third International Conference on Machine Learning (ICML 2026, Seoul)
+    conference-web: https://icml.cc/Conferences/2026
+    status:
+    authors: <u>Yen-Shan Chen</u>, Sian-Yao Huang, Cheng-Lin Yang, Yun-Nung Chen.
+    pdf: https://arxiv.org/abs/2510.00586
+    code: https://github.com/cycraft-corp/Eye-on-Me
+    demo: https://openreview.net/forum?id=ChfIF8UZ6X
+    slides:
+    talk:
+    poster: https://icml.cc/virtual/2026/poster/61331
+    abstract-less: >-
+      Existing data poisoning attacks on retrieval-augmented generation (RAG) systems scale
+      poorly, as they require costly optimization of poisoned documents for each target phrase.
+    abstract-more: >-
+      We introduce Eyes-on-Me, a modular attack that decomposes an adversarial document into
+      reusable Attention Attractors and Focus Regions, adapting to new targets at near-zero cost
+      by steering a small subset of attention heads correlated with attack success. Across 18
+      end-to-end RAG settings, it raises average attack success rates from 21.9 to 57.8 (2.6x
+      over prior work), and a single optimized attractor transfers to unseen black-box retrievers
+      and generators without retraining.
+    tag: more_eyesonme
+    category: adversarial-robustness
 
   - title: LLMs are Biased Evaluators But Not Biased for Fact-Centric Retrieval Augmented Generation
     system-name:

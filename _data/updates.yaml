@@ -3,11 +3,17 @@ visible: 5
 
 updates:
 
+  - time: Oct 2026
+    desc: Presented <hightlight>TraceSafe</hightlight> at <a href="https://colmweb.org/" target="_blank" rel="noopener">COLM 2026</a> in San Francisco.
+
   - time: Sep 2026
     desc: >-
       <hightlight>Expected Harm</hightlight> accepted to
       <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener">NeurIPS 2026</a>
       (Evaluation &amp; Datasets Track) as a <hightlight>Spotlight</hightlight> (0.87%) 🎉
+
+  - time: Sep 2026
+    desc: Presented <hightlight>Latent-Mark</hightlight> as a <hightlight>long oral</hightlight> at <a href="https://interspeech2026.org/" target="_blank" rel="noopener">Interspeech 2026</a> in Sydney.
 
   - time: Aug 6, 2026
     desc: I finally made a personal website! <hightlight>Welcome</hightlight> 🎉
